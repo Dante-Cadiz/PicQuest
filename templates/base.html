@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="PICQUEST/static/index.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-light"
+      style="background-color: #dd9d92"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href=""
+          ><img
+            src="./PIQUEST/media/logo.jpg"
+            style="width: 75px"
+            alt="Logo"
+          />PicQuest</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div>
+        <video
+          autoplay
+          muted
+          loop
+          src="./PIQUEST/media/video1.mp4"
+          style="width: 100%"
+        ></video>
+        <h1 class="header">Welcome to PicQuest !!!</h1>
+        <p class="header">
+          Do you have a special photo that you want to share? <br />
+          Please feel free to join our contest. <br />
+          Thank you!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
