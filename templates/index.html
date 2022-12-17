@@ -1,3 +1,25 @@
 {% extends 'base.html' %}
+{% load static%}
 {% block content %}
+
+    <!-- Video section -->
+    <section>
+      <div>
+        <video
+          autoplay
+          muted
+          loop
+          src="{% static 'video/video1.mp4' %}"
+          style="width: 100%"
+        ></video>
+        <h1 class="header">Welcome to PicQuest !!!</h1>
+        <p class="header">
+          Do you have a special photo that you want to share? <br />
+          Please feel free to join our contest. <br />
+          Thank you!
+        </p>
+      </div>
+      </section>
+      <!--/ Video section End -->
+
 {% endblock %}
