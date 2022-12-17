@@ -1,25 +1,31 @@
 {% extends "base.html" %}
-
 {% load i18n %}
 {% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
-
+{% block head_title %}
+  {% trans "Sign In" %}
+{% endblock %}
 {% block content %}
-
-<h1>{% trans "Sign In" %}</h1>
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-
-  <p>{% blocktrans %}Dont have an account yet?
-  <a href="{{ signup_url }}">Sign up</a> here.{% endblocktrans %}</p>
-</form>
-
+  <h1>{% trans "Sign In" %}</h1>
+  <div class="container h-100">
+    <div class="row h-50 justify-content-center align-items-center">
+      <div class="col-10 col-sm-9 col-md-8 col-lg-6 bg-black">
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+            <input type="hidden"
+                   name="{{ redirect_field_name }}"
+                   value="{{ redirect_field_value }}"/>
+          {% endif %}
+          <a class="button secondaryAction"
+             href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+          <p>
+            {% blocktrans %}Dont have an account yet?
+  <a href="{{ signup_url }}">Sign up</a> here.{% endblocktrans %}
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
 {% endblock %}
