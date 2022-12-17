@@ -24,7 +24,4 @@
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify",
-   "githubPullRequests.ignoredPullRequestBranches": [
-      "main"
-   ]
 }
