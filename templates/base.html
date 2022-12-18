@@ -25,18 +25,20 @@
   <body style="height: 100%">
     <!-- NavBar Start -->
     <nav
+      id="navigation"
       class="navbar navbar-expand-lg navbar-light navbar-default"
       style="background-color: #dd9d92"
     >
       <div class="container-fluid zero-left">
         <a class="navbar-logo" href=""
           ><img
+            class="logo-img"
             src="{% static 'photos/logo.jpg' %}"
-            style="width: 75px"
             alt="Logo"
-          /></a
-          ><h6 class="navbar-heading"><a class="heading-link" href="">PicQuest</a
-        ></h6>
+        /></a>
+        <h6 class="navbar-heading">
+          <a class="heading-link" href="">PicQuest</a>
+        </h6>
         <button
           class="navbar-toggler"
           type="button"
@@ -51,10 +53,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="{% url 'home'%}"
+              <a class="nav-link" aria-current="page" href="{% url 'home'%}"
                 >Home</a
               >
             </li>
@@ -87,10 +86,33 @@
     {% block content %} {% endblock %}
 
     <!-- Footer -->
-    <footer>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-twitter"></i>
+    <footer
+      class="footer mt-auto py-3 dark-bg"
+    >
+      <p class="m-0 text-center text-black">©The 5 Elfs Team - Hackathon 2022</p>
+      <div class="m-0 text-center text-white social-networks">
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="facebook"
+          ><i class="fab fa-xl fa-facebook-square ms-3"></i
+        ></a>
+        <a
+          href="https://www.twitter.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="twitter"
+          ><i class="fab fa-xl fa-twitter-square ms-3"></i
+        ></a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="instagram"
+          ><i class="fab fa-xl fa-instagram-square ms-3"></i
+        ></a>
+      </div>
     </footer>
 
     <script

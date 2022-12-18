@@ -4,19 +4,18 @@
 <h1>Hello</h1>
 {% else %}
 <!-- Video section -->
-<section>
-  <div class="container h-100">
-    <div class="row align-items-center">
-      <div class="col-md-6 justify-content-left">
-        <video
+  <div class="container-fluid zero-margin">
+    <div class="row container-fluid align-items-center">
+      <div class="col-md-4">
+        <video class="d-none d-md-block"
           autoplay
           muted
           loop
           src="{% static 'video/video1.mp4' %}"
-          style="height: 100vh; width: 50vh"
+          style="height: 85vh;"
         ></video>
       </div>
-      <div class="col-md-6 h-100">
+      <div class="col-md-8 h-100">
         <h1 class="header">Welcome to PicQuest</h1>
 
         <p class="header">
@@ -27,7 +26,6 @@
       </div>
     </div>
   </div>
-</section>
 {% endif %}
 <!--/ Video section End -->
 {% endblock %}

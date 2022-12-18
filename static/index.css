@@ -21,13 +21,26 @@ body {
     text-align: center;
 }
 
-/* Navbar text */
+/* Navbar text and items */
+
+#navigation {
+    padding: 0;
+}
+
+.logo-img {
+    border: 2px ridge #F0DBDB;
+    width: 90px;
+}
 
 nav {
     z-index: 1;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     top: 0;
+}
+
+#navbarText {
+    justify-content: right;
 }
 
 .nav-item {
@@ -45,13 +58,18 @@ a:hover, a:visited, a:hover a:active {
 .navbar-logo {}
 
 .navbar-heading {
+    margin: 0;
     font-family: 'Shadows Into Light', cursive;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 4rem;
-    margin-left: 10px;
+    padding: 10px 10px 10px 10px;
 }
 .heading-link {
     color: #222222;
+}
+
+.nav-toggler {
+    margin-right: 10px;
 }
 
 /* form */
@@ -70,19 +88,31 @@ form {
     display: inline-block;
 }
 
-.background-img {
-    z-index: 2;
-    background: url(../static/photos/back.jpg);
-    position: relative;
-    overflow: hidden;
-}
-
 .zero-left {
     padding-left: 0;
+}
+
+.zero-margin {
+    padding: 0;
+    background: url(../static/photos/back.jpg) no-repeat center center fixed;
+    background-image: linear-gradient(to bottom, rgba(219, 163, 154, 1), rgba(240, 219, 219, 1));
+    background-size: 100%;
 }
 
 
 /* Footer */
 
+footer {
+    z-index: 1;
+    background-color: #F0DBDB;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+footer i {
+    color: #aa756d;
+}
 
 /* End Footer */
