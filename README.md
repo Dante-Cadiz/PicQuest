@@ -1,4 +1,8 @@
 # PicQuest
+
+[View the Live Project here](https://picquest.herokuapp.com/)
+
+![Initial Image]()
 * Amiresponsive images or equivalent can go here
 * Short description
 
@@ -20,7 +24,13 @@
 
 
 ## UX Design
-* Wireframes can go here
+
+### Wireframes:
+
+Wireframes created in the UX stage:
+![Wireframes](https://res.cloudinary.com/lizac/image/upload/v1671364439/PicQuest/wireframes1_tr1mtj.png)
+![wirefr](https://res.cloudinary.com/lizac/image/upload/v1671364433/PicQuest/wireframes2_hrmgrx.png)
+
 * Flowchart can go here
 * User Experience with images and responses to user inputs
 * Accessibility
@@ -28,6 +38,30 @@
 
 ## Datamodel
 * Can also go into UX design subheading, but probably better with separate subheading.
+
+## Technologies Used
+
+### **Languages Used:**
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+[Back to Top](#PicQuest)
+
+
+## Frameworks, Libraries & Programs Used
+
+1. [Git](https://git-scm.com/):
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+2. [GitHub](https://github.com/):
+    - GitHub is used to store the project's code after being pushed from Git.
+3. [Balsamiq](https://balsamiq.com/):
+    - Balsamiq was used to create the wireframes during the design process.
+4. [Am I responsive?](https://ui.dev/amiresponsive?url=https%3A%2F%2Fbytes.dev):
+    - This application was used for visualization of the application on diferent devices.
+5. [Cloudinary](https://cloudinary.com/):
+    - Cloudinary was used to store and link the images.
+6. [Heroku](https://dashboard.heroku.com/) 
+    - Heroku was used for deployment, the specification is in the deployment section.
+7. The Code Institute's GitHub full template for Python is used in order for the program to display properly in the deployed site on Heroku.
 
 
 ## Testing
