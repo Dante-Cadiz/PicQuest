@@ -8,14 +8,11 @@
 PicQuest is an app where users are give the task to photograph something during the day/week e.g. a duck, some street art, a stranger, an interesting plant or tree. The app allows users to easily create accounts with their names which they can add and remove images from. Users are encouraged to like images and add comments in order to to connect with eachother. Moderators can monitor images and comments posted.
 The home page is centred around a “most liked” feature - presented in a continuously updating collage style. This allows users to compare and contrast their photographs with those of other users. 
 
-
 ## Collaborators
-* Team members and team name can go here
-
+The team for this hackathon project is made up of @Enquil - Jim Olesen @Dante-Cadiz - Dante Cadiz @debbiect246 - Deborah Thompson @lizac9 - Liza Carelli and @MariusBujor - Marius Bujor.
 
 ## Content
 * Navigation to subheadings (UI design, UX design etc.) can go here
-
 
 ## UI Design
 * page layout
