@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
+from django.http import HttpResponseRedirect
+from cloudinary.forms import cl_init_js_callbacks
 from .models import Post
+from .forms import PostForm
 
 # Create your views here.
 
@@ -24,11 +27,32 @@ class PostList(generic.ListView):
             #{
                # "your_posts": your_posts,
            # },)
-#class AddPost(View):
-    #def post(self, request, slug, *args, **kwargs):
+
+
+def AddPost(request):
+    if request.method == "POST":
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    
+    form = PostForm()
+    return render(request, 'create_post.html', {'form': form})
+
 
 #class EditPost(View):
     #def post(self, request, slug, *args, **kwargs):
 
 #class DeletePost(View):
     #def post(self, request, slug, *args, **kwargs):
+
+class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('posts'))

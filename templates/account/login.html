@@ -6,12 +6,11 @@
 {% endblock %}
 {% block content %}
   <div class="container h-100">
-    <div class="row h-50 justify-content-center align-items-center">
+    <div class="row h-100 justify-content-center align-items-center">
       <div class="col-10 col-sm-9 col-md-8 col-lg-6 bg-black">
         <form class="login" method="POST" action="{% url 'account_login' %}">
           <h1>{% trans "Sign In" %}</h1>
           {% csrf_token %}
-          <h2>Login</h2>
           <div class="form-group">
             <label for="username">Username</label>
             <input class="form-control password" type="text" name="login" placeholder="Username" autocomplete="username" maxlength="150" required="" id="id_login">
