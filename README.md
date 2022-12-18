@@ -17,7 +17,7 @@ The team for this hackathon project is made up of @Enquil - Jim Olesen, @Dante-C
 ## UI Design
 * page layout
 #### **Typography:**
-The font ‘’ was chosen for the title, which welcomes the user to the website.The body font is called ‘’. This font results in a more balanced and clear legibility for the remainder of website. In the case that one of the other fonts can't be loaded, they will fall back to a sans-serif font.
+The font ‘Shadows Into Light’ was chosen for the title, which welcomes the user to the website and the fallback font for this is 'Cursive' The body font is called ‘Roboto’. This font results in a more balanced and clear legibility for the remainder of website. In the case that the 'Roboto' font can't be loaded, they will fall back to a sans-serif font.
 
 #### **Colour Scheme:**
 
