@@ -4,20 +4,30 @@
 
     <!-- Video section -->
     <section>
-      <div>
+      <img class="background-img"
+            src="{% static 'photos/back.jpg' %}"
+            alt="Logo"
+          />PicQuest</a
+        >
+      <div class="container h-100">
+        <div class="row align-items-center">
+          <div class="col-md-6 justify-content-left">
         <video
           autoplay
           muted
           loop
           src="{% static 'video/video1.mp4' %}"
-          style="width: 100%"
+          style="height: 100vh; width: 50vh"
         ></video>
-        <h1 class="header">Welcome to PicQuest !!!</h1>
-        <p class="header">
-          Do you have a special photo that you want to share? <br />
-          Please feel free to join our contest. <br />
-          Thank you!
+      </div>
+      <div class="col-md-6 h-100">
+        <h1 class="header">Welcome to PicQuest</h1>
+          
+          <p class="header">Do you have a special photo that you want to share? <br>
+          <a href="{% url 'account_signup' %}">Sign Up</a> or <a href="{% url 'account_login' %}">Login</a> and join the contest!
         </p>
+      </div>
+      </div>
       </div>
       </section>
       <!--/ Video section End -->

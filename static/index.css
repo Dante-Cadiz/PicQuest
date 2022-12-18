@@ -53,3 +53,17 @@ body {
     font-size:17px;
     color:aqua;
 }
+
+
+/* Individual Styling Classes */
+
+.inline-block {
+    display: inline-block;
+}
+
+.background-img {
+    z-index: 2;
+    background: url(../static/photos/back.jpg);
+    position: relative;
+    overflow: hidden;
+}
