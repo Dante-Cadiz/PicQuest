@@ -9,7 +9,7 @@ PicQuest is an app where users are give the task to photograph something during 
 The home page is centred around a “most liked” feature - presented in a continuously updating collage style. This allows users to compare and contrast their photographs with those of other users. 
 
 ## Collaborators
-The team for this hackathon project is made up of @Enquil - Jim Olesen, @Dante-Cadiz - Dante Cadiz, @debbiect246 - Deborah Thompson, @lizac9 - Liza Carelli and @MariusBujor - Marius Bujor.
+The team for this hackathon project is made up of [@Enquil](https://github.com/Enquil) - Jim Olesen, [@Dante-Cadiz](https://github.com/Dante-Cadiz) - [Dante Cadiz](https://www.linkedin.com/in/dante-cadiz-460735213/), [@debbiect246](https://github.com/debbiect246) - [Deborah Thompson](https://www.linkedin.com/in/debbie-thompson-1baa4733/), [@lizac9](https://github.com/lizac9) - [Liza Carelli](https://www.linkedin.com/in/liza-c-8636bb219/) and [@MariusBujor](https://github.com/MariusBujor) - Marius Bujor.
 
 ## Content
 * Navigation to subheadings (UI design, UX design etc.) can go here
@@ -125,3 +125,4 @@ External resources relevant to this code:
 - The favicon came from [Favicon](https://favicon.io/).
 - The colour palette was displayed by [Coolors](https://coolors.co/fefcf3-f5ebe0-f0dbdb-dba39a).
 
+[Back to Top](#PicQuest)
