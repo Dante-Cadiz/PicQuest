@@ -9,7 +9,7 @@ PicQuest is an app where users are give the task to photograph something during 
 The home page is centred around a “most liked” feature - presented in a continuously updating collage style. This allows users to compare and contrast their photographs with those of other users. 
 
 ## Collaborators
-The team for this hackathon project is made up of @Enquil - Jim Olesen @Dante-Cadiz - Dante Cadiz @debbiect246 - Deborah Thompson @lizac9 - Liza Carelli and @MariusBujor - Marius Bujor.
+The team for this hackathon project is made up of @Enquil - Jim Olesen, @Dante-Cadiz - Dante Cadiz, @debbiect246 - Deborah Thompson, @lizac9 - Liza Carelli and @MariusBujor - Marius Bujor.
 
 ## Content
 * Navigation to subheadings (UI design, UX design etc.) can go here
@@ -39,19 +39,18 @@ Wireframes created in the UX stage:
 * User Experience with images and responses to user inputs
 * Accessibility
 
-
 ## Datamodel
 * Can also go into UX design subheading, but probably better with separate subheading.
 
 ## Technologies Used
 
-### **Languages Used:**
+### **Languages & Frameworks Used:**
+- [Django](https://en.wikipedia.org/wiki/Django_(web_framework))
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 [Back to Top](#PicQuest)
 
-
-## Frameworks, Libraries & Programs Used
+## Libraries & Programs Used:
 
 1. [Git](https://git-scm.com/):
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
