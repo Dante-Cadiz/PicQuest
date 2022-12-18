@@ -65,7 +65,10 @@ Wireframes created in the UX stage:
 6. [Heroku](https://dashboard.heroku.com/) 
     - Heroku was used for deployment, the specification is in the deployment section.
 7. The Code Institute's GitHub full template for Python is used in order for the program to display properly in the deployed site on Heroku.
-
+8. [Google Fonts](https://fonts.google.com/):
+    - Google fonts were used to import the 'Shadows Into Light' and 'Roboto' font into the style.css file which is used on all pages throughout the project.
+9. [Font Awesome](https://fontawesome.com/):
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 
 ## Testing
 * Lighthouse tests at https://web.dev/measure/
@@ -119,4 +122,6 @@ This site was created for educational purposes for the december 2022 hackathon p
 External resources relevant to this code:
 
 #### **Media:**
--
+- The favicon came from [Favicon](https://favicon.io/).
+- The colour palette was displayed by [Coolors](https://coolors.co/fefcf3-f5ebe0-f0dbdb-dba39a).
+
