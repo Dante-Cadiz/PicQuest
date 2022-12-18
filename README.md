@@ -113,6 +113,7 @@ The ordering is as follows:
 ## Credits
 
 #### **Content:**
+This site was created for educational purposes for the december 2022 hackathon project Re:Unity by Code Institute. 
 
 #### **Code:**
 External resources relevant to this code:
