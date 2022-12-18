@@ -4,7 +4,10 @@
 
 ![Initial Image]()
 * Amiresponsive images or equivalent can go here
-* Short description
+
+Picquest is an app where users are give the task to photograph something during the day/week e.g. a duck, some street art, a stranger, an interesting plant or tree. The app allows users to easily create accounts with their names which they can add and remove images from. Users are encouraged to like images and add comments in order to to connect with eachother. Moderators can monitor images and comments posted.
+The home page is centred around a “most liked” feature - presented in a continuously updating collage style. This allows users to compare and contrast their photographs with those of other users. 
+
 
 ### Deployed link
 
@@ -20,7 +23,15 @@
 
 ## UI Design
 * page layout
-* color schemes, fonts, icons etc.
+#### **Typography:**
+The font ‘’ was chosen for the title, which welcomes the user to the website. The decision to use this font was influenced by the font used in.. The body font is called ‘’. This font results in a more balanced and clear legibility for the remainder of website. In the case that one of the other fonts can't be loaded, they will fall back to a sans-serif font.
+
+#### **Colour Scheme:**
+
+![Colour Palette]()
+
+
+[Back to Top](#PicQuest)
 
 
 ## UX Design
