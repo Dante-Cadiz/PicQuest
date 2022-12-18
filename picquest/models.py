@@ -14,6 +14,9 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(
         User, related_name='like', blank=True)
+    
+    class Meta:
+        ordering = ["-created_on"]
 
     def __str__(self):
         return self.title
@@ -22,4 +25,7 @@ class Post(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
+    
+    def number_of_likes(self):
+        return self.likes.count()
     
