@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html style="height: 100%">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,24 +13,30 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{% static 'index.css' %}" />
     <link rel="shortcut icon" href="{% static 'photos/camera.png' %}"/>
   </head>
-  <body style="height: 100%;">
-
+  <body style="height: 100%">
     <!-- NavBar Start -->
     <nav
-      class="navbar navbar-expand-lg navbar-light navbar-default navbar-static-top"
+      class="navbar navbar-expand-lg navbar-light navbar-default"
       style="background-color: #dd9d92"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href=""
+      <div class="container-fluid zero-left">
+        <a class="navbar-logo" href=""
           ><img
             src="{% static 'photos/logo.jpg' %}"
             style="width: 75px"
             alt="Logo"
-          />PicQuest</a
-        >
+          /></a
+          ><h6 class="navbar-heading"><a class="heading-link" href="">PicQuest</a
+        ></h6>
         <button
           class="navbar-toggler"
           type="button"
@@ -45,7 +51,12 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{% url 'home'%}"
+                >Home</a
+              >
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
@@ -55,9 +66,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_login' %}">Login</a>
             </li>
-            {% endif %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+              {% endif %}
             </li>
           </ul>
         </div>
@@ -65,16 +76,19 @@
     </nav>
     <!--/ NavBar End -->
 
-      {% block content %}
-      {% endblock %}
-      
-      <!-- Footer -->
-      <footer> 
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
-      </footer>
-      <script src="https://kit.fontawesome.com/155195b896.js" crossorigin="anonymous"></script>
-      <!-- Footer End -->
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/155195b896.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Footer End -->
   </body>
 </html>
