@@ -21,7 +21,7 @@ The font ‘’ was chosen for the title, which welcomes the user to the website
 
 #### **Colour Scheme:**
 
-![Colour Palette]()
+![Colour Palette](https://res.cloudinary.com/lizac/image/upload/v1671387872/PicQuest/color_palette_qil4ra.png)
 
 
 [Back to Top](#PicQuest)
