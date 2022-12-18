@@ -125,3 +125,4 @@ External resources relevant to this code:
 - The favicon came from [Favicon](https://favicon.io/).
 - The colour palette was displayed by [Coolors](https://coolors.co/fefcf3-f5ebe0-f0dbdb-dba39a).
 
+[Back to Top](#PicQuest)
