@@ -24,4 +24,7 @@
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify",
+   "[django-html]": {
+      "editor.defaultFormatter": "monosans.djlint"
+   },
 }
