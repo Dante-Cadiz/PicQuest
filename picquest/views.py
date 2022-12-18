@@ -18,21 +18,27 @@ class PostList(generic.ListView):
     model = Post #temporary until filter created for today's posts only
     paginate_by = 6
 
-#class YourPosts(View):
-    #def get(self, request, *args, **kwargs):
-        #your_posts = Post.objects.filter(
-         #       author=self.request.user.id).order_by('created_on')
-        #return render(
-            #request, "your_posts.html",
-            #{
-               # "your_posts": your_posts,
-           # },)
+    #def get_context_data(self, **kwargs):
+        #context = super().get_context_data(**kwargs)
+        #context['likes'] = Post.likes()
+        #return context
+
+class YourPosts(View):
+    def get(self, request, *args, **kwargs):
+        your_posts = Post.objects.filter(
+               author=self.request.user.id).order_by('created_on')
+        return render(
+            request, "your_posts.html",
+            {
+                "your_posts": your_posts,
+            },)
 
 
 def AddPost(request):
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
+            form.author = request.user.id
             form.save()
             return redirect('home')
     

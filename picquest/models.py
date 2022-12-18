@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 
 class Post(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(null=True)
     image = CloudinaryField('image')
     author = models.ForeignKey(User, on_delete=models.CASCADE,
