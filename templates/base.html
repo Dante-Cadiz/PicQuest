@@ -24,7 +24,7 @@
   <body style="height: 100%">
     <!-- NavBar Start -->
     <nav
-      class="navbar navbar-expand-lg navbar-light navbar-default navbar-static-top"
+      class="navbar navbar-expand-lg navbar-light navbar-default"
       style="background-color: #dd9d92"
     >
       <div class="container-fluid zero-left">
@@ -65,9 +65,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_login' %}">Login</a>
             </li>
-            {% endif %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+              {% endif %}
             </li>
           </ul>
         </div>

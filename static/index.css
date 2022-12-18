@@ -24,7 +24,10 @@ body {
 /* Navbar text */
 
 nav {
+    z-index: 1;
     width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .nav-item {
