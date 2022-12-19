@@ -1,3 +1,49 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% load static%} {% block content %} 
+{% if user.is_authenticated %}
+<div id="welcome-greeting" class="container-fluid text-center">
+  <h1 class="login-header inline-block">Well, Hello There!</h1>
+  <br />
+  <p>
+    Picquest - where you get to share a photo each day.
+  </br>
+    Today we would like to share a photo of a duck!
+  </p>
+  <br>
+  <p>You only need to submit one photo so choose the best one.</p>
+  <p>Remember to give your picture a title.</p>
+  <br>
+  <p>Others can see the photo and like it.</p>
+  <p>At the end of the day the photo with the most likes is the winner.</p>
+  <br>
+  <p>Good luck!</p>
+</div>
+{% else %}
+<!-- Video section -->
+<div class="container-fluid zero-margin zero-padding">
+  <div
+    class="row gradient container-fluid align-items-center zero-margin zero-padding"
+  >
+    <div class="col-sm-0 col-md-6 col-lg-4 zero-margin zero-padding">
+      <video
+        class="d-none d-md-block"
+        autoplay
+        muted
+        loop
+        src="{% static 'video/video1.mp4' %}"
+        style="height: 95vh"
+      ></video>
+    </div>
+    <div id="home-greeting" class="text-center col-sm-12 col-md-6 col-lg-8 h-100 zero-margin zero-padding">
+      <h1 class="header welcome-header inline-block">Welcome to PicQuest</h1>
+      <br>
+      <p class="header welcome-p inline-block">
+        Got a special photo to share? <br />
+        <a href="{% url 'account_signup' %}">Sign Up</a> or
+        <a href="{% url 'account_login' %}">Login</a> and join us today.
+      </p>
+    </div>
+  </div>
+</div>
+{% endif %}
+<!--/ Video section End -->
 {% endblock %}

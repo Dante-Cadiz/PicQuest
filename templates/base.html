@@ -1,78 +1,134 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html style="height: 100%">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PicQuest</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="PICQUEST/static/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <link rel="shortcut icon" href="{% static 'photos/camera.png' %}" />
   </head>
-  <body>
+  <body style="height: 100%">
+    <!-- NavBar Start -->
     <nav
-      class="navbar fixed-top navbar-expand-lg navbar-light"
+      id="navigation"
+      class="navbar navbar-expand-lg navbar-light navbar-default"
       style="background-color: #dd9d92"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href=""
+      <div class="container-fluid zero-left">
+        <a class="navbar-logo" href="{% url 'home' %}"
           ><img
-            src="./PIQUEST/media/logo.jpg"
-            style="width: 75px"
+            class="logo-img"
+            src="{% static 'photos/logo.jpg' %}"
             alt="Logo"
-          />PicQuest</a
-        >
+        /></a>
+        <h6 class="navbar-heading">
+          <a class="heading-link" href="{% url 'home' %}">PicQuest</a>
+        </h6>
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
+          data-target="#navbarDropDown"
+          aria-controls="navbarDropDown"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarDropDown">
+          <ul class="navbar-nav me-auto mr-2">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Home</a>
+              <a class="nav-link" aria-current="page" href="{% url 'home' %}"
+                >Home</a
+              >
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+              <a class="nav-link" href="{% url 'create_post' %}">AddPhoto</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'posts' %}">AllPhotos</a>
+            </li>
+
+            {% else %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_login' %}">Login</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>
     </nav>
-    <section>
-      <div>
-        <video
-          autoplay
-          muted
-          loop
-          src="./PIQUEST/media/video1.mp4"
-          style="width: 100%"
-        ></video>
-        <h1 class="header">Welcome to PicQuest !!!</h1>
-        <p class="header">
-          Do you have a special photo that you want to share? <br />
-          Please feel free to join our contest. <br />
-          Thank you!
-        </p>
+    <!--/ NavBar End -->
+
+    {% block content %} {% endblock %}
+     
+    {% if request.path != "/posts/" %}
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 dark-bg">
+      <p class="m-0 text-center text-black">
+        ©The 5 Elfs Team - Hackathon 2022
+      </p>
+      <div class="m-0 text-center text-white social-networks">
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="facebook"
+          ><i class="fab fa-xl fa-facebook-square ms-3"></i
+        ></a>
+        <a
+          href="https://www.twitter.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="twitter"
+          ><i class="fab fa-xl fa-twitter-square ms-3"></i
+        ></a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="instagram"
+          ><i class="fab fa-xl fa-instagram-square ms-3"></i
+        ></a>
       </div>
-    </section>
+    </footer>
+    {% endif %}
+    <script
+      src="https://kit.fontawesome.com/155195b896.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"
+  ></script>
+    <!-- Footer End -->
   </body>
 </html>

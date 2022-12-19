@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 mt-2 left">
+            <div class="row">
+        {% for post in post_list %}
+        <div class="col-md-4">
+            <div class="card mb-3 bg-light border-primary">
+                <div class="card-body">
+                    <div class="image-container">
+                        <img class="card-img-top" src="{{ post.image.url }}" alt="Post image">
+                    </div>
+                    <h2>{{ post.title }}</h2>
+                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% if user.id in likes %} 
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                        {% else %}
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
