@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>PicQuest</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'index.css' %}" />
-    <link rel="shortcut icon" href="{% static 'photos/camera.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'photos/camera.png' %}" />
   </head>
   <body style="height: 100%">
     <!-- NavBar Start -->
@@ -30,30 +30,30 @@
       style="background-color: #dd9d92"
     >
       <div class="container-fluid zero-left">
-        <a class="navbar-logo" href=""
+        <a class="navbar-logo" href="{% url 'home' %}"
           ><img
             class="logo-img"
             src="{% static 'photos/logo.jpg' %}"
             alt="Logo"
         /></a>
         <h6 class="navbar-heading">
-          <a class="heading-link" href="">PicQuest</a>
+          <a class="heading-link" href="{% url 'home' %}">PicQuest</a>
         </h6>
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
+          data-target="#navbarDropDown"
+          aria-controls="navbarDropDown"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarDropDown">
+          <ul class="navbar-nav me-auto mr-2">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{% url 'home'%}"
+              <a class="nav-link" aria-current="page" href="{% url 'home' %}"
                 >Home</a
               >
             </li>
@@ -67,7 +67,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'posts' %}">AllPhotos</a>
             </li>
-            
+
             {% else %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_login' %}">Login</a>
@@ -75,8 +75,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
             </li>
-             {% endif %}
-            
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -84,12 +83,13 @@
     <!--/ NavBar End -->
 
     {% block content %} {% endblock %}
-
+     
+    {% if request.path != "/posts/" %}
     <!-- Footer -->
-    <footer
-      class="footer mt-auto py-3 dark-bg"
-    >
-      <p class="m-0 text-center text-black">©The 5 Elfs Team - Hackathon 2022</p>
+    <footer class="footer mt-auto py-3 dark-bg">
+      <p class="m-0 text-center text-black">
+        ©The 5 Elfs Team - Hackathon 2022
+      </p>
       <div class="m-0 text-center text-white social-networks">
         <a
           href="https://www.facebook.com"
@@ -114,11 +114,21 @@
         ></a>
       </div>
     </footer>
-
+    {% endif %}
     <script
       src="https://kit.fontawesome.com/155195b896.js"
       crossorigin="anonymous"
     ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"
+  ></script>
     <!-- Footer End -->
   </body>
 </html>
