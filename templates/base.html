@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html style="height: 100%">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="{% static 'index.css' %}" />
     <link rel="shortcut icon" href="{% static 'photos/camera.png' %}" />
   </head>
-  <body style="height: 100%">
+  <body style="height: 100vh; 
+  display: flex;
+  flex-direction: column;">
     <!-- NavBar Start -->
     <nav
       id="navigation"
@@ -84,9 +86,8 @@
 
     {% block content %} {% endblock %}
      
-    {% if request.path != "/posts/" %}
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer py-3 dark-bg">
       <p class="m-0 text-center text-black">
         ©The 5 Elfs Team - Hackathon 2022
       </p>
@@ -114,7 +115,7 @@
         ></a>
       </div>
     </footer>
-    {% endif %}
+  </section>
     <script
       src="https://kit.fontawesome.com/155195b896.js"
       crossorigin="anonymous"
