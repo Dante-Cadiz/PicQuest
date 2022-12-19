@@ -40,7 +40,7 @@ def AddPost(request):
         if form.is_valid():
             form.author = request.user.id
             form.save()
-            return redirect('home')
+            return redirect('posts')
     
     form = PostForm()
     return render(request, 'create_post.html', {'form': form})
