@@ -15,7 +15,10 @@ class HomeView(View):
 
 class PostList(generic.ListView):
     template_name = "posts.html"
-    model = Post #temporary until filter created for today's posts only
+    model = Post
+    #liked = False
+    #if Post.likes.filter(id=self.request.user.id).exists():
+        #liked = True 
     paginate_by = 6
 
     #def get_context_data(self, **kwargs):
