@@ -160,11 +160,21 @@ a:hover a:active {
 }
 
 .login-header {
-  margin-top: 200px;
+  margin-top: 170px;
+}
+
+#welcome-greeting h1 {
+  font-size: 4rem;
+}
+
+#welcome-greeting h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 #welcome-greeting p {
   margin: 0;
+  font-size: 1.5rem;
 }
 
 #id-image {
