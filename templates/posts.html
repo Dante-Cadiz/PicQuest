@@ -13,9 +13,10 @@
                         <img class="card-img-top" src="{{ post.image.url }}" alt="Post image">
                     </div>
                     <h2>{{ post.title }}</h2>
+                    <p>{{ post.number_of_likes }} likes</p>
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                         {% csrf_token %}
-                        {% if user.id in likes %} 
+                        {% if user in post.likes %} 
                         <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
                         {% else %}
                         <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
