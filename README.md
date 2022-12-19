@@ -109,9 +109,13 @@ The ordering is as follows:
 
 ## Site Expansion and Future Improvement
 * Any ideas that might we might not have time to implement
+* Sort functionality when viewing daily photos, newest/oldest/likes etc.
+* Sort functionality to own page, newest/oldest/likes etc.
+* Password change function
+* Password reset function
 
 ## Known Issues & Bugs
-* Update as soon as one is encountered and you cant fix it straight away
+* Sign-out form needs to be edited to center in screen 
 
 ## Credits
 
