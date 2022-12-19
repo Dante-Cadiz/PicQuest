@@ -133,5 +133,6 @@ External resources relevant to this code:
 - The favicon came from [Favicon](https://favicon.io/).
 - The colour palette was displayed by [Coolors](https://coolors.co/fefcf3-f5ebe0-f0dbdb-dba39a).
 - The logo photo came from [dreamstime.com](https://www.dreamstime.com/vector-male-photographer-logo-camera-image113070741)
+- The home page video came from [Pexels](https://www.pexels.com/video/women-taking-photos-of-their-alcoholic-drinks-6396174/)
 
 [Back to Top](#PicQuest)
