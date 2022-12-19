@@ -47,6 +47,8 @@ Wireframes created in the UX stage:
 ### **Languages & Frameworks Used:**
 - [Django](https://en.wikipedia.org/wiki/Django_(web_framework))
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
 
 [Back to Top](#PicQuest)
 
@@ -124,9 +126,12 @@ This site was created for educational purposes for the december 2022 hackathon p
 
 #### **Code:**
 External resources relevant to this code:
+[This YouTube Tutorial](https://www.youtube.com/watch?v=1T6G7Znrbfg) for showing how to handle user image uploads to Cloudinary
+[Code Institute's Django Blog Project](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) for site pagination HTML
 
 #### **Media:**
 - The favicon came from [Favicon](https://favicon.io/).
 - The colour palette was displayed by [Coolors](https://coolors.co/fefcf3-f5ebe0-f0dbdb-dba39a).
+- The logo photo came from [dreamstime.com](https://www.dreamstime.com/vector-male-photographer-logo-camera-image113070741)
 
 [Back to Top](#PicQuest)

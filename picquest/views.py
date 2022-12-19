@@ -15,16 +15,8 @@ class HomeView(View):
 
 class PostList(generic.ListView):
     template_name = "posts.html"
-    model = Post
-    #liked = False
-    #if Post.likes.filter(id=self.request.user.id).exists():
-        #liked = True 
+    model = Post 
     paginate_by = 6
-
-    #def get_context_data(self, **kwargs):
-        #context = super().get_context_data(**kwargs)
-        #context['likes'] = Post.likes()
-        #return context
 
 class YourPosts(View):
     def get(self, request, *args, **kwargs):
