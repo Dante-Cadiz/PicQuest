@@ -1,7 +1,19 @@
 {% extends 'base.html' %} {% load static%}
 {% block content %}  
 {% if user.is_authenticated %}
-<h1>Hello</h1>
+<div>
+  <h1>Picquest - where you get to share photos each day!</h1>
+  <br>
+  <p>Today we would like you to share a photo of a duck</p>
+  <p>You only need to upload one photo so choose the best one!</p>
+  <p>You should give your picture a title!</p>
+  <br>
+  <p>Others can see your photo and like it.</p>
+  <p>At the end of the day the photo with the most likes is the winner!</p>
+  <p>We will post the winners name on this page the day following each days' tasks</p>
+  <p>Good luck!</p>
+
+</div>
 {% else %}
 <!-- Video section -->
   <div class="container-fluid zero-margin">
